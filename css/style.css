@@ -1,0 +1,287 @@
+/* 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+body, div, p, h1, h2, a, li {
+    font-family: "Noto Sans KR", serif;
+    font-weight: 400;
+    line-height: 26px;
+    color: #666;
+}
+
+/* 콘텐츠 시작 */
+.wrap {
+    width: 1200px;
+    margin: 60px auto;
+}
+
+/* nav */
+/* .nav {} */
+li {
+    float: left;
+    background-color: #444;
+}
+li:first-child {
+    border-radius: 5px 0 0 5px;
+}
+li:first-child > a:hover {
+    border-radius: 5px 0 0 5px;
+}
+li:last-child {
+    border-radius: 0 5px 5px 0;
+}
+li:last-child > a:hover {
+    border-radius: 0 5px 5px 0;
+}
+li > a {
+    padding: 15px 84px;
+    display: inline-block;
+    color: #fff;    
+}
+li > a:hover { 
+    background-color: #888;
+    color: #000;
+}
+
+/* 가운데 콘텐츠 */
+.cont {
+    position: relative;
+    top: 100px;
+    width: 1200px;
+    height: 620px;
+}
+    .photo1 > div {
+        position: absolute;
+        width: 439px;
+        height: 585px;
+        box-shadow: 8px 8px 12px #999;
+        overflow: hidden;
+    }
+    .photo1 > div > img {
+        width: 439px;
+        height: 585px;
+    }
+    
+    .default-image {
+        opacity: 1;
+      }
+      
+      .hover-image {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out; /* N초 동안 천천히 변환 */
+      }
+      
+      .default-image:hover {
+        opacity: 0;
+      }
+      
+      .hover-image:hover {
+        opacity: 1;
+      }
+
+.txt {
+    position: absolute;
+    width: 680px;
+    height: 310px;
+    left: 480px;
+    top: 15px
+}
+    .txt > h2 {
+        margin-bottom: 24px;
+        color: #000;
+    }
+
+    .btn {
+        width: 180px;
+        height: 45px;
+        border: 2px dotted red;
+        background-color: #eee;
+        color: red;
+        text-align: center;
+        line-height: 45px;
+        font-size: 15px;
+        margin-top: 24px;
+    }
+    .btn:hover {
+        background-color: red;
+        color: #fff;
+        transition: all 0.4s;
+    }
+
+/* 포토 갤러리 자리 */
+.photo2 {
+    position: relative;
+    margin-top: 100px;
+}
+    .photo2 > div {
+        display: inline-block;
+        width: 222px;
+        height: 296px;
+        box-shadow: 4px 4px 9px #777;
+        margin-right: 14px;
+        overflow: hidden;
+    }
+    .photo2 > div > img {
+        width: 222px;
+        height: 296px;
+    }
+    .photo2 > div > img:hover {
+        transform: scale(1.1, 1.1);
+        transition: all 0.3s;
+    }
+    
+    /* 하부 콘텐츠 cont2 */
+    .cont2 {
+        position: relative;
+        width: 100%;
+        height: 1100px;
+        margin-bottom: 80px;
+        overflow: hidden;
+    }
+    .cont2 > .cont2_txt1 {
+        position: absolute;
+        font-family: "Allerta Stencil", serif;
+        font-size: 18rem;   /* 22rem = 22배 */
+        font-weight: bold;
+        top: 350px;
+        right: 1%;
+        color: #000;
+        z-index: 556;
+    }
+    .cont2 > .cont2_txt2 {
+        position: absolute; 
+        font-size: 28px;
+        color: #222223;
+        top: 580px;
+        left: 41%;
+        z-index: 553;
+    }
+    .cont2 > .cont2_sub_img {
+        position: absolute;
+        right: -4%;
+        bottom: 17%;
+        object-fit: cover;
+        z-index: 555;
+    }
+    .cont2 > .cont2_img {
+        position: absolute;
+        left: 1%;
+        object-fit: cover;
+        z-index: 555;
+    }
+    .cont2 > .bg {
+        position: absolute;
+        width: 100%;
+        height: 850px;
+        background-color: rgb(110, 33, 27);
+    }
+
+    .container {
+        display: grid;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 250px;
+        padding: 150px;
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(4, 200px);
+        background-color: #eee;
+        grid-gap: 1rem;
+        grid-template-areas:
+          'A B B'
+          'A E F'
+          'G E I'
+          'J J J';
+      }
+      
+      .image {
+        width: 100%;  height: 100%;
+        object-fit: cover;  /* 가로세로비를 유지하면서, 요소 콘텐츠 박스를 가득 채우며 서로의 가로세로비가 일치하지 않으면 객체 일부가 잘려나간다. */
+      }
+
+      .wrap_img_1 { grid-area: A; overflow: hidden;}
+      .wrap_img_2 { grid-area: B; overflow: hidden;}
+      /* .wrap_img_3 { grid-area: C; overflow: hidden;} */
+      
+      /* .wrap_img_4 { grid-area: D; overflow: hidden;} */
+      .wrap_img_5 { grid-area: E; overflow: hidden;}
+      .wrap_img_6 { grid-area: F; overflow: hidden;}
+      
+      .wrap_img_7 { grid-area: G; overflow: hidden;}
+      /* .wrap_img_ { grid-area: H; overflow: hidden;} */
+      .wrap_img_9 { grid-area: I; overflow: hidden;}
+      
+      .wrap_img_10 { grid-area: J; overflow: hidden;}
+      /* .wrap_img_11 { grid-area: K; overflow: hidden;} */
+      /* .wrap_img_12 { grid-area: L; overflow: hidden;} */
+
+      .image1 { transform: scale(1.25); }
+      .image2 { transform: scale(1.4); padding-left: 7px;}
+      /* .image3 { transform: scale(1.0); } */
+      
+      /* .image4 { transform: scale(1.0); } */
+      .image5 { transform: scale(1.5); }
+      .image6 { transform: scale(1.31); padding-left: 3px;}
+      
+      .image7 { transform: scale(1.32); padding-right: 30px;}
+      /* .image8 { transform: scale(1.0); } */
+      .image9 { transform: scale(2.6); padding-left: 7px;}
+      
+      .image10 { transform: scale(1.06); }
+      /* .image11 { transform: scale(1.0); } */
+      /* .image12 { transform: scale(1.0); } */
+
+/* 하부 콘텐츠 cont3 */
+    .cont3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        position: relative;
+    }
+    .cont3 > .cont3_txt {
+        position: absolute;
+        top: -60px;
+    }
+    .cont3 > img {
+        width: 22%;
+        height: 400px;
+        object-fit: cover;
+        background-color: #f7f7f7;
+    }
+    .cont3 > img:hover {
+        transform: scale(1.02, 1.02);
+        transition: all 0.4s;
+        opacity: 0.8;;
+    }
+/* 하부 콘텐츠 cont4 */
+    .cont4 {
+        display: flex;
+        margin-top: 120px;
+    }
+    .cont4 > img {
+        width: 33.333%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+/* footer */
+footer {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    padding: 40px;
+}
+    footer .footer1 {
+        width: 100px;
+        padding-right: 50px;
+    }
+    footer .footer2 {
+        flex: 1;
+    }
