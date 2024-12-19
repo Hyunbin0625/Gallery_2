@@ -16,6 +16,10 @@ body, div, p, h1, h2, a, li {
     color: #666;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* 콘텐츠 시작 */
 .wrap {
     width: 1200px;
